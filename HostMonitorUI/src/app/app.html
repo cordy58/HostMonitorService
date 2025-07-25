@@ -1,0 +1,24 @@
+<h1>{{ title }}</h1>
+
+<table class="ping-table">
+  <thead>
+    <tr>
+      <th>Host</th>
+      <th>Roundtrip Time (ms)</th>
+      <th>Status</th>
+      <th>Port Open</th>
+      <th>Checked At</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let ping of pingResults">
+      <td>{{ ping.host }}</td>
+      <td>{{ ping.roundtripTime }}</td>
+      <td [class.success]="ping.success" [class.failure]="!ping.success">
+        {{ ping.success ? 'Online' : 'Offline' }}
+      </td>
+      <td [class.port-open]="ping.tcpPortOpen">{{ ping.tcpPortOpen ? 'Yes' : 'No' }}</td>
+      <td>{{ ping.checkedAt | date:'short' }}</td>
+    </tr>
+  </tbody>
+</table>

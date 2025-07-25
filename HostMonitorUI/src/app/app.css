@@ -1,0 +1,48 @@
+body {
+  background-color: #1e1e1e; /* darker background */
+  color: #f0f0f0;
+  font-family: sans-serif;
+  margin: 2rem;
+}
+
+h1 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+table.ping-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #2c2c2c; /* slightly darker */
+  color: #d0d0d0; /* pale gray for better contrast */
+}
+
+.ping-table th,
+.ping-table td {
+  border: 1px solid #555;
+  padding: 0.75rem;
+  text-align: left;
+  color: #d0d0d0; /* pale gray for better readability */
+}
+
+.ping-table th {
+  background-color: #444;
+  color: #ddd;
+}
+
+.ping-table tr:nth-child(even) {
+  background-color: #242424; /* slightly darker alt row */
+}
+
+.success {
+  color: #5fff5f;
+}
+
+.failure {
+  color: #ff5f5f;
+}
+
+.port-open {
+  color: #90ee90;
+  font-weight: bold;
+}
